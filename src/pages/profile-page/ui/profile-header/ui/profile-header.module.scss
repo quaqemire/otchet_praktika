@@ -1,0 +1,239 @@
+/* ===== HEADER CONTAINER ===== */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  padding: 35px;
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, #ffffff 0%, #f6f8ff 100%);
+  box-shadow:
+          0 10px 30px rgba(0, 0, 0, 0.05),
+          0 2px 6px rgba(0, 0, 0, 0.04);
+
+  transition: 0.3s ease;
+}
+
+/* ===== AVATAR ===== */
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #5a67ff, #7c3aed);
+  color: white;
+
+  box-shadow:
+          0 8px 20px rgba(90, 103, 255, 0.3);
+
+  transition: 0.3s ease;
+
+  svg {
+    opacity: 0.95;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* ===== INFO BLOCK ===== */
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 14px;
+}
+
+/* ===== NAME + BADGE ===== */
+
+.nameBlock {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1f2937;
+  }
+}
+
+.badge {
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+
+  background: #eef2ff;
+  color: #4f46e5;
+
+  border-radius: 999px;
+}
+
+/* ===== SPECIALTY TEXT ===== */
+
+.info p {
+  margin: 0;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* ===== BUTTON ===== */
+
+.editBtn {
+  margin-top: 6px;
+  width: fit-content;
+
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  background: #5a67ff;
+  color: white;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  box-shadow: 0 6px 18px rgba(90, 103, 255, 0.25);
+
+  &:hover {
+    background: #434fe0;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(90, 103, 255, 0.35);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.modal input {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: all 0.2s;
+
+  &:focus {
+    border-color: #5a67ff;
+    box-shadow: 0 0 0 2px rgba(90,103,255,0.2);
+    outline: none;
+  }
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.saveBtn, .cancelBtn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.saveBtn {
+  background: #5a67ff;
+  color: white;
+  box-shadow: 0 6px 18px rgba(90, 103, 255, 0.25);
+
+  &:hover {
+    background: #434fe0;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(90, 103, 255, 0.35);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.cancelBtn {
+  background: #f3f4f6;
+  color: #374151;
+
+  &:hover {
+    background: #e5e7eb;
+  }
+
+  &:active {
+    background: #d1d5db;
+  }
+}

@@ -1,0 +1,47 @@
+/* ===== STATS ===== */
+.stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.25s;
+
+  span {
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+  }
+
+  p {
+    margin: 5px 0 0 0;
+    color: #777;
+    font-size: 14px;
+  }
+
+  &.disabled {
+    background: #f3f4f6;
+    color: #a1a1aa;
+    cursor: not-allowed;
+
+    span {
+      color: #a1a1aa;
+    }
+
+    p {
+      color: #a1a1aa;
+      font-style: italic;
+    }
+
+    &:hover {
+      transform: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+  }
+}

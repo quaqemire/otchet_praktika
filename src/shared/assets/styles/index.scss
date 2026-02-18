@@ -1,0 +1,15 @@
+@use 'variables/global';
+@use 'reset';
+@use 'themes/dark';
+@use 'themes/light';
+
+.app {
+  font: var(--font-family-main);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
