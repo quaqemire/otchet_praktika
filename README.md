@@ -1,75 +1,130 @@
-# React + TypeScript + Vite
+Wulf
+📌 Описание проекта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Wulf — это учебная веб-платформа для студентов, реализованная в формате MVP (Minimum Viable Product).
+Проект разработан полностью на стороне клиента (frontend) и демонстрирует базовую логику социальной платформы: авторизацию, профиль пользователя, создание публикаций и навигацию по разделам.
 
-Currently, two official plugins are available:
+Цель проекта — продемонстрировать навыки разработки SPA-приложения на React с использованием современной архитектуры и клиентского хранения данных.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎯 Функциональные возможности
 
-## React Compiler
+Авторизация пользователя (через localStorage)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Просмотр и редактирование профиля
 
-Note: This will impact Vite dev & build performances.
+Создание публикаций
 
-## Expanding the ESLint configuration
+Сохранение постов в localStorage
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Базовая навигация между страницами
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Выход из аккаунта
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Разделы «Лента» и «Новости» (в разработке)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🛠 Используемые технологии
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+React
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Vite
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+TypeScript
+
+react-router-dom
+
+CSS Modules
+
+localStorage API
+
+📂 Структура проекта
+src/
+│
+├── app/              # Главная логика приложения и маршрутизация
+│
+├── pages/            # Страницы приложения (Profile, Login и др.)
+│
+├── widgets/          # Крупные UI-блоки (Sidebar и др.)
+│
+├── shared/           # Переиспользуемые UI-компоненты
+│
+└── assets/           # Стили, иконки и статические ресурсы
+
+🚀 Установка и запуск проекта
+1. Клонировать репозиторий
+git clone <ссылка-на-репозиторий>
+
+2. Перейти в папку проекта
+cd wulf
+
+3. Установить зависимости
+npm install
+
+4. Запустить проект
+npm run dev
+
+
+После запуска приложение будет доступно по адресу:
+
+http://localhost:5173
+
+🔐 Логика хранения данных
+
+Так как backend отсутствует, все данные хранятся в браузере:
+
+данные пользователя — в localStorage
+
+посты — в localStorage
+
+состояние авторизации — проверяется при загрузке приложения
+
+📘 Пользовательский сценарий
+
+Войти в систему
+
+Перейти в профиль
+
+Отредактировать данные
+
+Создать публикацию
+
+Перейти по разделам через Sidebar
+
+Выйти из аккаунта
+
+⚠ Ограничения MVP
+
+Отсутствует серверная часть
+
+Нет реальной регистрации пользователей
+
+Нет базы данных
+
+Нет адаптивной версии для мобильных устройств (пока)
+
+📈 Возможные улучшения
+
+Добавление backend (FastAPI / Node.js)
+
+Подключение базы данных
+
+Реальная система авторизации
+
+Добавление комментариев и лайков
+
+Полноценная лента новостей
+
+Адаптивный дизайн
+
+📎 Назначение проекта
+
+Проект создан в рамках учебной практики для закрепления навыков:
+
+разработки SPA-приложений
+
+построения архитектуры проекта
+
+работы с маршрутизацией
+
+управления состоянием
+
+документирования кода
