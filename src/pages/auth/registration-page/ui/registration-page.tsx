@@ -2,6 +2,11 @@ import {type FormEvent, useState} from "react";
 import s from './registration-page.module.scss';
 import {NavLink, useNavigate} from "react-router-dom";
 
+interface IUser {
+    email: string;
+    password: string;
+}
+
 export const RegistrationPage = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -17,7 +22,7 @@ export const RegistrationPage = () => {
         }
 
         const users = JSON.parse(localStorage.getItem("users") || "[]");
-        if (users.some(user => user.email === email)) {
+        if (users.some((user: IUser) => user.email === email)) {
             alert("Пользователь с таким email уже существует!");
             return;
         }

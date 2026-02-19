@@ -1,1 +1,1 @@
-export {ProfileHeader, type User} from './ui/profile-header.tsx'
+export { ProfileHeader } from './ui/profile-header';

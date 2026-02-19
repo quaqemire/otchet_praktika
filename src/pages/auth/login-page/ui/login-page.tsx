@@ -2,6 +2,11 @@ import {type FormEvent, useState} from "react";
 import s from './login-page.module.scss';
 import { NavLink, useNavigate } from "react-router-dom";
 
+interface IUser {
+    email: string;
+    password: string;
+}
+
 export const LoginPage = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -11,7 +16,7 @@ export const LoginPage = () => {
         e.preventDefault();
 
         const users = JSON.parse(localStorage.getItem("users") || "[]");
-        const user = users.find(user => user.email === email && user.password === password);
+        const user = users.find((user: IUser) => user.email === email && user.password === password);
 
         if (user) {
             alert("Вход выполнен успешно!");
